@@ -1,5 +1,6 @@
 import discord, json, requests
 from bs4 import BeautifulSoup
+from deep_translator import GoogleTranslator
 
 # Config laden
 cfg = json.load(open("config.json"))
@@ -74,6 +75,7 @@ async def on_message(msg):
             if q in text:
                 i = text.find(q)
                 summary = text[i:i+180].split(".")[0] + "."
+                summary = GoogleTranslator(source='auto', target='de').translate(summary)
                 site = url.split("/")[2]
                 formatted.append(f"🦖 **{summary}**\n➡️ [{site}]({url})")
     
