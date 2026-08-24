@@ -60,8 +60,18 @@ async def on_message(msg):
             hits.append(f"{url}\n{text[i:i+300]}")
 
     if hits:
-        await msg.channel.send("\n\n".join(hits) + "\n\n" + cfg["signature"])
-    else:
-        await msg.channel.send(cfg["no_hits"] + "\n\n" + cfg["signature"])
+    formatted = []
+    for url, text in DATA.items():
+        if q in text:
+            i = text.find(q)
+            summary = text[i:i+180].split(".")[0] + "."
+            site = url.split("/")[2]  # nur Domain
+            formatted.append(f"🦖 **{summary}**\n➡️ [{site}]({url})")
 
+    await msg.channel.send("\n\n".join(formatted) + "\n\n" + cfg["signature"])
+
+else:
+    await msg.channel.send(cfg["no_hits"] + "\n\n" + cfg["signature"])
+    
+        
 client.run(TOKEN)
