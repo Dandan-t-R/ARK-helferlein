@@ -27,14 +27,16 @@ def fetch(url):
     except:
         return ""
 
-DATA = {u: fetch(u) for u in SOURCES}
+DATA = {}
 intents = discord.Intents.default()
 intents.message_content = True
 client = discord.Client(intents=intents)
 
 @client.event
 async def on_ready():
-    print("Helper ist online !")
+    print("Helferlein ist online !")
+    global DATA
+    DATA = {u: fetch(u) for u in SOURCES}
 
 @client.event
 async def on_message(msg):
