@@ -3,7 +3,12 @@ from bs4 import BeautifulSoup
 
 # Config laden
 cfg = json.load(open("config.json"))
-TOKEN = cfg["token"]
+
+# Token aus Render Environment
+import os
+TOKEN = os.getenv("TOKEN")
+
+# Sources aus der config.json
 SOURCES = cfg["sources"]
 
 # Channel-Daten laden
