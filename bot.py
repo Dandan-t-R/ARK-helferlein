@@ -60,9 +60,9 @@ async def on_message(msg):
             hits.append(f"{url}\n{text[i:i+300]}")
 
     if hits:
-    formatted = []
-    for url, text in DATA.items():
-        if q in text:
+        formatted = []
+        for url, text in DATA.items():
+            if q in text:
             i = text.find(q)
             summary = text[i:i+180].split(".")[0] + "."
             site = url.split("/")[2]  # nur Domain
