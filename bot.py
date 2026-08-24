@@ -28,7 +28,9 @@ def fetch(url):
         return ""
 
 DATA = {u: fetch(u) for u in SOURCES}
-client = discord.Client(intents=discord.Intents.default())
+intents = discord.Intents.default()
+intents.message_content = True
+client = discord.Client(intents=intents)
 
 @client.event
 async def on_ready():
