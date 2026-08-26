@@ -131,7 +131,27 @@ async def on_message(msg):
             hits.append((url, snippet))
 
     if not hits:
-        await msg.channel.send(cfg["no_hits"] + "\n\n" + cfg["signature"])
+        # Keine Treffer → freie Internetsuche als Fallback
+        url = f"https://duckduckgo.com/html/?q={query}"
+        try:
+            response = requests.get(url, timeout=10)
+            soup = BeautifulSoup(response.text, "html.parser")
+            results = soup.find_all("a", class_="result__a")
+        except Exception as e:
+            await msg.channel.send(cfg["no_hits"] + "\n\n" + cfg["signature"])
+            return
+
+        if not results:
+            await msg.channel.send(cfg["no_hits"] + "\n\n" + cfg["signature"])
+            return
+
+        output = []
+        for r in results[:5]:
+            title = r.get_text()
+            link = r["href"]
+            output.append(f"🔍 **{title}**\n➡️ {link}")
+
+        await msg.channel.send("\n\n".join(output) + "\n\n" + cfg["signature"])
         return
 
     formatted = []
@@ -150,4 +170,3 @@ async def on_message(msg):
     await msg.channel.send(output + "\n\n" + cfg["signature"])
 
 client.run(TOKEN)
-
