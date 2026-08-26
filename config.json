@@ -1,13 +1,44 @@
 {
-  "sources": [
-    "https://www.curseforge.com/ark-survival-ascended",
-    "https://www.dododex.com/",
-    "https://arkcodes.com/",
-    "https://steamcommunity.com/sharedfiles/filedetails/?id=3175794207",
+  "sources_info": [
+    "https://wikily.gg/de/ark-survival-ascended/",
     "https://ark.wiki.gg/",
-    "https://wikily.gg/de/ark-survival-ascended/"
+    "https://steamcommunity.com/app/2399830/guides/",
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=3175794207",
+    "https://www.curseforge.com/ark-survival-ascended"
   ],
 
-  "no_hits": "SRY, keine passenden ergebnisse.",
-  "signature": "Ark Helferlein, für Erweiterungen einfach über meinen DC melden discord.gg/ EVb7BzHn8q - by Dandan-t-R/Dandan_DcK"
+  "sources_taming": [
+    "https://www.dododex.com/",
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=3175794207"
+  ],
+
+  "sources_stat": [
+    "https://www.dododex.com/",
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=3175794207"
+  ],
+
+  "sources_craft": [
+    "https://ark.wiki.gg/wiki/Crafting",
+    "https://ark.wiki.gg/wiki/Items",
+    "https://steamcommunity.com/app/2399830/guides/",
+    "https://www.curseforge.com/ark-survival-ascended"
+  ],
+
+  "sources_config": [
+    "https://beaconapp.cc/",
+    "https://ark.wiki.gg/wiki/Server_configuration",
+    "https://ark.wiki.gg/wiki/Settings",
+    "https://server.nitrado.net/deu/news/ark-survival-ascended",
+    "https://docs.hetzner.com/",
+    "https://steamcommunity.com/app/2399830/guides/"
+  ],
+
+  "sources_id": [
+    "https://arkcodes.com/",
+    "https://ark.wiki.gg/wiki/Item_IDs",
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=3175794207"
+  ],
+
+  "no_hits": "SRY, keine passenden Ergebnisse !!! ",
+  "signature": "🦖 Ark Helferlein by Dandan-t-R/Dandan_DcK & HKHKD – discord.gg/ EVb7BzHn8q"
 }
