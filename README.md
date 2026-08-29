@@ -19,7 +19,7 @@ Ein einfacher, frei nutzbarer **ARK: Survival Ascended‑Helfer‑Bot**, der
 ## 🚀 Nutzung
 
 1. **Bot einladen**  
-   https://discord.com/oauth2/authorize?client_id=1541044458894663690&permissions=4504288969968704&integration_type=0&scope=bot
+   https://discord.com/oauth2/authorize?client_id=1541044458894663690&permissions=5630463754751040&integration_type=0&scope=bot+applications.commands
 
 2. **In einen beliebigen, berechtigten Channel gehen**.
 
